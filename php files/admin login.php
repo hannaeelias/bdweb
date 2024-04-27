@@ -20,10 +20,10 @@ if (empty($namee) || empty($password)) {
     if ($result) {
         // Check if a row was returned if yes that means there is a a correct usenamer and password
         if (mysqli_num_rows($result) == 1) {
-            
+            header('Location: /bdweb/html pages\admin page.html');
            
         } else {
-            header('Location: /bdweb/html pages\login.html');
+            header('Location: /bdweb/html pages\admin login.html');
         }
     } else {
         echo "Error: " . mysqli_error($conn);
