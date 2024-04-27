@@ -1,11 +1,11 @@
+
 document.querySelector(".writeHeader").innerHTML = `
-    <header align="center">
-    
-        <div id="nav"> 
-            <a href="index.html">comic</a> |
-            <a href="archive.html">Chapters</a> |
-            <a href="chracter.html">character</a> |
-            <a href="about.html">about</a> 
+   
+    <div class="header">
+        <div id="logo">
+            <a href="indexsearchtest.html"><img src="/bdweb/imgs/logo/luna (1).png" alt=""></a>
         </div>
-    </header>
+        
+    </div>
+    
 `;

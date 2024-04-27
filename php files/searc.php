@@ -1,9 +1,10 @@
 <?php
 
 include "datbaselink.php";
+
 $book = ($_GET['boek']);
 if(empty($book)){
-    header('Location: /bdweb/html pages\indexsearchtest.html');
+    header('Location:/bdweb/html pages\indexsearchtest.html');
 }else{
     
     //create a query and does it
@@ -38,4 +39,3 @@ if(empty($book)){
 $conn->close();  
 
 ?>
-

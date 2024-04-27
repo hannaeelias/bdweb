@@ -21,7 +21,7 @@ if (empty($namee) || empty($password)) {
         // Check if a row was returned if yes that means there is a a correct usenamer and password
         if (mysqli_num_rows($result) == 1) {
             
-           
+            header('Location: /bdweb/html pages\welcome.html');
         } else {
             header('Location: /bdweb/html pages\login.html');
         }

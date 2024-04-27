@@ -3,6 +3,16 @@
   display: inline-block;
 }
 
+.dropdown button{
+  border: 2px solid dodgerblue;
+  outline: none;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1.2em;
+  background: dodgerblue;
+  color: white;
+}
+
 .dropdown-content {
   display: none;
   position: absolute;
@@ -10,7 +20,13 @@
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   padding: 12px 16px;
-  z-index: 1;
+}
+
+.dropdown-content button {
+  background-color: #f9f9f9;
+  border: none;
+  padding: 0;
+  color: black;
 }
 .dropdown-content a {
     color: black;
@@ -20,4 +36,79 @@
   display: block;
 }
 
+#logo img{
+  width: 100px;
+  height: 100px;
+  padding: 1%;
+}
 
+body{
+  background-color: rgb(229, 245, 250);
+  margin: 0;
+  padding: 0;
+
+}
+.writeHeader{
+  background-color: rgb(213, 242, 250);
+  width: 100%;
+  position: relative;
+}
+
+button{
+    border: none;
+    padding: 1%;
+}
+
+button:hover{
+  border: none;
+ background-color: rgb(174, 245, 245);
+}
+
+.center{
+  padding: 50px 50px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.center h1{
+  border-bottom: 5px solid dodgerblue;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.center .inputbox input{
+  border: 2px solid #000;
+  outline: none;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1.2em;
+}
+
+.center .inputbox span {
+  position: absolute;
+  font-size: 1em;
+  transition: 0.6s;
+}
+.center .inputbox [type="submit"] {
+  background: dodgerblue;
+  color: #fff;
+  border: #fff;
+}
+
+.bar{
+  padding: 10px;
+
+}
+.bar input{
+  border: 2px solid #000;
+  outline: none;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1.2em;
+}
+
+.bar input[type="submit"]{
+  background: dodgerblue;
+  color: #fff;
+  border: #fff;
+}
