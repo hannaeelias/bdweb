@@ -1,3 +1,10 @@
+<?php
+// Start the session
+session_start();
+if (isset($_SESSION['userName'])) {
+    echo "Your session is running: " . $_SESSION['userName'];
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,9 +16,8 @@
 </head>
 <body>
     <div class="writeHeader"></div>
-
     <div class="center">
-        <h1>admin page</h1>
+        <h1>login page</h1>
         <form action="/bdweb/php files/tes.php" method="POST">
             <div class="inputbox">
                 <input type="text" name="username" placeholder="username">
@@ -25,19 +31,17 @@
            
         </form>
     </div>
+    
 
     
-    <div class="dropdown">
-        <button class="dropbtn">Dropdown</button>
-        <div class="dropdown-content">
-            <a href="/bdweb/php files/datbaselink.php"><button>database conetion test</button></a>
-            <a href="register.html"><button>register</button></a>
-            <a href="login.html"><button>login</button></a>
-            <a href="indexsearchtest.html"><button>homepage</button></a>
-        </div>
-        
-    </div>
-    <script src="/bdweb/js files/search.js"></script>
+    <div class="dropdownwrite"></div>
+   
+    <div class="writefooter"></div>
+    <script src="/bdweb/js files/dropdown.js"></script>
+
+    <script src="/bdweb/js files/header.js"></script>
+    <script src="/bdweb/js files/footer.js"></script>
+    
 </body>
 
 </html>

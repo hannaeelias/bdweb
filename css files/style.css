@@ -112,3 +112,37 @@ button:hover{
   color: #fff;
   border: #fff;
 }
+
+
+.write_deletebtn{
+  border: 2px solid;
+  outline: none;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1.2em;
+  background: dodgerblue;
+  color: #fff;
+  border: #fff;
+}
+
+.write_deletebtn:hover{
+  border: none;
+  background-color: rgb(174, 245, 245);
+
+}
+.write_deletebtn:disabled{
+  display: none;
+
+}
+
+a button{
+  border: 2px solid;
+  outline: none;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1.2em;
+  background: dodgerblue;
+  color: #fff;
+  border: #fff;
+}
+

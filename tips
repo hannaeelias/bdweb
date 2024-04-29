@@ -1,1 +1,5 @@
 if php local not updating Ctrl + Shift + R.
+
+if you want to check if some info stays consistents acroust pages or you just want to see the info 
+var_dump($_SESSION);
+echo session_id();

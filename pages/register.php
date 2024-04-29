@@ -1,3 +1,10 @@
+<?php
+// Start the session
+session_start();
+if (isset($_SESSION['userName'])) {
+    echo "Your session is running: " . $_SESSION['userName'];
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,10 +21,10 @@
         <h1>register page</h1>
         <form action="/bdweb/php files/REGISTER_check.php" method="POST">
             <div class="inputbox">
-                <input type="text" name="username" placeholder="username">
+                <input type="text" name="username" required placeholder="username" >
             </div>
             <div class="inputbox">   
-                <input type="password" name="PWD" placeholder="password">
+                <input type="password" name="PWD" required placeholder="password">
             </div>
             <div class="inputbox">
                 <input type="submit" value="enter">
@@ -26,18 +33,15 @@
         </form>
     </div>
         
-    <div class="dropdown">
-        <button class="dropbtn">Dropdown</button>
-        <div class="dropdown-content">
-            <a href="/bdweb/php files/datbaselink.php"><button>database conetion test</button></a>
-            <a href="login.html"><button>login</button></a>
-            <a href="indexsearchtest.html"><button>homepage</button></a> 
-            <a href="admin login.html"><button>admin</button></a>       
-        </div>
-        
-    </div>
+    <div class="dropdownwrite"></div>
 
-    <script src="/bdweb/js files/search.js"></script>
+    
+    <div class="writefooter"></div>
+
+    <script src="/bdweb/js files/dropdown.js"></script>
+
+    <script src="/bdweb/js files/header.js"></script>
+    <script src="/bdweb/js files/footer.js"></script>
 
 </body>
 </html>

@@ -1,11 +1,12 @@
 <?php
+session_start();
 include "datbaselink.php";
 
 $name = ($_POST['username']);
 $password = ($_POST['PWD']);
 
 if(empty($name) || empty($password)){
-    header('Location: /bdweb/html pages\register.html');
+    header('Location: /bdweb/pages\register.php');
 }else{  
         
     //create a query and does it

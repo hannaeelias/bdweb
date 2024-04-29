@@ -1,3 +1,7 @@
+<?php
+// Start the session
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,18 +24,19 @@
     </div>
     
     
-    <div class="dropdown">
-        <button class="dropbtn">Dropdown</button>
-        <div class="dropdown-content">
-            <a href="/bdweb/php files/datbaselink.php"><button>database conetion test</button></a>
-            <a href="login.html"><button>login</button></a>
-            <a href="register.html"><button>register</button></a>
-            <a href="admin login.html"><button>admin</button></a>
-        </div>
-    </div>
+    <div class="dropdownwrite"></div>
 
-   
-    <script src="/bdweb/js files/search.js"></script>
+        <h1>welcome <?php if (isset($_SESSION['userName'])) {
+            echo $_SESSION['userName'];
+        }
+       ?></h1>
+
+
+    <div class="writefooter"></div>
+    <script src="/bdweb/js files/dropdown.js"></script>
+
+    <script src="/bdweb/js files/header.js"></script>
+    <script src="/bdweb/js files/footer.js"></script>
 </body>
 
 
