@@ -7,14 +7,14 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>home</title>
     <link rel="stylesheet" href="/bdweb/css files/style.css">
 </head>
 
 
 <body>
     <div class="writeHeader"></div>
-
+  
     <div class="bar">
         <form action="/bdweb/php files\searc.php" method="GET">
             <input type="text" name="boek" placeholder="search" id="livesearch">

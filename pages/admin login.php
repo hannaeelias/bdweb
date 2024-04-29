@@ -8,7 +8,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>admin login</title>
     <link rel="stylesheet" href="/bdweb/css files/style.css">
 
 </head>
@@ -16,7 +16,7 @@ session_start();
     <div class="writeHeader"></div>
 
     <div class="center">
-        <h1>admin page</h1>
+        <h1>admin login</h1>
         <form action="/bdweb/php files/admin login.php" method="POST">
             <div class="inputbox">
                 <input type="text" name="username" placeholder="username">

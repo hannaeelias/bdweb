@@ -10,7 +10,7 @@ if($_SESSION['value'] == null or $_SESSION['value'] == 0){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>add book</title>
     <link rel="stylesheet" href="/bdweb/css files/style.css">
 </head>
 <body>
@@ -18,6 +18,9 @@ if($_SESSION['value'] == null or $_SESSION['value'] == 0){
 
     <h1>admin page</h1>
 
+    <form action="">
+        <input type="text">
+    </form>
 
     <a href="admin page.php"><button>back</button></a>
 
