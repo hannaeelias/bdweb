@@ -10,7 +10,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>admin login</title>
     <link rel="stylesheet" href="/bdweb/css files/style.css">
-
+    <link rel="icon" href="\bdweb\imgs\logo\luna (2).jpg">
 </head>
 <body>
     <div class="writeHeader"></div>
@@ -32,12 +32,11 @@ session_start();
     </div>
 
     
-    <div class="dropdownwrite"></div>
+
 
     
   
     <div class="writefooter"></div>
-    <script src="/bdweb/js files/dropdown.js"></script>
     <script src="/bdweb/js files/header.js"></script>
     <script src="/bdweb/js files/footer.js"></script>
 </body>

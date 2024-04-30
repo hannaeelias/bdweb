@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 include "datbaselink.php";
 
 $book = ($_GET['boek']);
@@ -10,7 +10,7 @@ if(empty($book)){
     
     //create a query and does it
    
-    $sql = "SELECT * FROM boek.booking WHERE naam LIKE '%$book%'";
+    $sql = "SELECT * FROM boek.booking WHERE name LIKE '%$book%'";
     $result = $conn->query($sql);
 
 
@@ -20,8 +20,11 @@ if(empty($book)){
             echo "search results for $book";
             echo "<br>";
             while($row = $result->fetch_assoc()) {
-                echo $row["naam"];
+                echo "<div class='book'>";
+                echo "<img src='" . $row["img_url"] . "' alt='Image'>";
+                echo "<h2><a href='\bdweb\pages\bookresult.php?id=" . $row["usrid"] . "'>" . $row["name"] . "</a></h2>";
                 echo"<br>";
+                echo "</div>";
               }
         } else {
             echo"<br>";

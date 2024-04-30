@@ -16,7 +16,7 @@ if (empty($namee) || empty($password)) {
     $sql = "SELECT * FROM user.gebruikt WHERE naam='$namee' AND pwd='$password'";
     $result = $conn->query($sql);
     
-    
+
     //shows what is in the database
     if ($result) {
         // Check if a row was returned if yes that means there is a a correct usenamer and password

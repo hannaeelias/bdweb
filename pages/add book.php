@@ -12,15 +12,14 @@ if($_SESSION['value'] == null or $_SESSION['value'] == 0){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>add book</title>
     <link rel="stylesheet" href="/bdweb/css files/style.css">
+    <link rel="icon" href="\bdweb\imgs\logo\luna (2).jpg">
 </head>
 <body>
     <div class="writeHeader"></div>
 
     <h1>admin page</h1>
 
-    <form action="">
-        <input type="text">
-    </form>
+
 
     <a href="admin page.php"><button>back</button></a>
 

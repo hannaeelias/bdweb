@@ -17,20 +17,11 @@ session_start();
     <div class="writeHeader"></div>
   
 
-
-        <h1>welcome <?php if (isset($_SESSION['userName'])) {
-            echo $_SESSION['userName'];
-        }
-       ?></h1>
-
-
-    
     <div class="container">
-        <h1>Books</h1>
-
-        <?php include "C:/xampp/htdocs/bdweb/php files/book.php"; ?>
+        <?php include "C:/xampp/htdocs/bdweb/php files/book_detail.php"; ?>
 
     </div>
+    
     <div class="writefooter"></div>
 
 
