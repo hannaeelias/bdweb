@@ -19,6 +19,11 @@ if($_SESSION['value'] == null or $_SESSION['value'] == 0){
 
     <h1>admin page</h1>
 
+    <form action="\bdweb\php files\barcodereader.php" method="post">
+        <label for="barcode">Scan Barcode:</label>
+        <input type="text" name="barcode" >
+        <input type="submit" value="Submit">
+    </form>
 
 
     <a href="admin page.php"><button>back</button></a>

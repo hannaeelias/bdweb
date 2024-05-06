@@ -1,6 +1,10 @@
 <?php
 // Start the session
 session_start();
+if($_SESSION['value'] == null or $_SESSION['value'] == 0){
+    $_SESSION['value'] = '0';
+
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,8 +23,14 @@ session_start();
 
     <div class="container">
         <?php include "C:/xampp/htdocs/bdweb/php files/book_detail.php"; ?>
+        <?php if ($_SESSION['value'] == '2'){
+            echo '<a href="remove book.php"><button>remove book</button></a>';
+            }
+        ?> 
 
     </div>
+
+  
     
     <div class="writefooter"></div>
 

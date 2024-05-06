@@ -2,7 +2,9 @@
 // Start the session
 session_start();
 
-
+if($_SESSION['value'] == null or $_SESSION['value'] == 0){
+  header('Location: /bdweb/pages\admin login.php');
+}
 
 ?>
 <!DOCTYPE html>
@@ -19,22 +21,17 @@ session_start();
 
     <h1>admin page</h1>
 
-    <a  <?php if ($_SESSION['value'] == '1' or $_SESSION['value'] ==2){
+    <?php if ($_SESSION['value'] == '1' or $_SESSION['value'] ==2){
+       echo '<a href="add book.php"><button>add book</button></a>';
       }
-      else
-      {
-           echo ' disabled=disabled ';
-      }
-    ?> href="add book.php"><button>add book</button></a>
+   
+    ?>
 
-
-<a  <?php if ($_SESSION['value'] == '2'){
+    <?php if ($_SESSION['value'] == '2'){
+        echo '<a href="remove book.php"><button>remove book</button></a>';
       }
-      else
-      {
-           echo ' disabled=disabled ';
-      }
-    ?> href="add book.php"><button>remove book</button></a>
+  
+    ?> 
 
 
     <div class="writefooter"></div>

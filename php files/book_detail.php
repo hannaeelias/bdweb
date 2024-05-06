@@ -11,9 +11,12 @@
         $row = $result->fetch_assoc();
         echo "<div class='detail_book'>";
         echo "<h1>" . $row["name"] . "</h1>";
-        echo "<p>" . $row["categori"] . "</p>";
+        echo "<h4>" . $row["categori"] . "</h4  >";
         echo "<img src='" . $row["img_url"] . "' alt='Image'>";
-        echo "<p>" . $row["resume"]."</p>";
+        echo "<p class='resume' >" . $row["resume"]."</p>";
+        echo "<p> writer " . $row["author"]."</p>";
+        echo "<p>" . $row["publication_year"]."</p>";
+        echo "<p> pages " . $row["pages"]."</p>";
         echo "</div>";
         // Display other details of the book as needed
     } else {

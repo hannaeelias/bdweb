@@ -1,7 +1,10 @@
 <?php
 // Start the session
 session_start();
+if($_SESSION['value'] == null or $_SESSION['value'] == 0){
+    $_SESSION['value'] = '0';
 
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,7 +16,9 @@ session_start();
     <link rel="icon" href="\bdweb\imgs\logo\luna (2).jpg">
 </head>
 <body>
+
     <div class="writeHeader"></div>
+    
     <div class="center">
         <h1>login page</h1>
         <form action="/bdweb/php files/tes.php" method="POST">

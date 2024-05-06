@@ -1,6 +1,10 @@
 <?php
 // Start the session
 session_start();
+if($_SESSION['value'] == null or $_SESSION['value'] == 0){
+    $_SESSION['value'] = '0';
+
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,7 +20,7 @@ session_start();
 <body>
     <div class="writeHeader"></div>
   
-    <div class="container">
+    <div class="searchcontainer">
         <h1>Books</h1>
 
         <?php include "C:/xampp/htdocs/bdweb/php files/searc.php"; ?>

@@ -8,9 +8,10 @@ document.querySelector(".writeHeader").innerHTML = `
     </div>
     <div class="boxheader">
         <p>follow me</p> <a href="https://github.com/hannaeelias">github</a> <p>|</p> 
-        <a href="/bdweb/pages/login.php">login</a><p>|</p> 
+        <a href="/bdweb/php files/logout.php">logout</a><p>|</p> 
         <a href="/bdweb/pages/register.php">register</a>
-
+        
+        
         <div class="bar">
             <form action="/bdweb/pages/search.php" method="GET">
                 <input type="text" name="boek" placeholder="search" id="livesearch">
@@ -27,6 +28,7 @@ document.querySelector(".writeHeader").innerHTML = `
             <a href="/bdweb/pages/admin login.php"><button>admin</button></a>
             <a href="/bdweb/php files/logout.php"><button>logout</button></a>
         </div>
+        
 
     </div>
     
