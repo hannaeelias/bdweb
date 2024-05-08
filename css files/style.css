@@ -8,7 +8,8 @@
   margin-top: 13px;
   padding: 5px;
   border-radius: 10px;
-  background: none;
+  color: white;
+  background: dodgerblue;
 }
 
 .dropdown-content {
@@ -140,9 +141,6 @@ a button{
   margin-right: 5px;
 }
 
-.dropdown{
-  margin-left: 5%;
-}
 
 
 

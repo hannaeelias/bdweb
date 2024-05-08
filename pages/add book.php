@@ -17,6 +17,7 @@ if($_SESSION['value'] == null or $_SESSION['value'] == 0){
 <body>
     <div class="writeHeader"></div>
 
+  
     <h1>admin page</h1>
 
     <form action="\bdweb\php files\barcodereader.php" method="post">

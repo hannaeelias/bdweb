@@ -9,7 +9,7 @@ if(empty($book)){
 }else{
     
     //create a query and does it
-   
+    //the little % is so it can also search for stuff that is infront or after it
     $sql = "SELECT * FROM boek.booking WHERE name LIKE '%$book%'";
     $result = $conn->query($sql);
 

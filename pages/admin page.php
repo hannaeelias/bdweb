@@ -24,7 +24,6 @@ if($_SESSION['value'] == null or $_SESSION['value'] == 0){
     <?php if ($_SESSION['value'] == '1' or $_SESSION['value'] ==2){
        echo '<a href="add book.php"><button>add book</button></a>';
       }
-   
     ?>
 
     <?php if ($_SESSION['value'] == '2'){

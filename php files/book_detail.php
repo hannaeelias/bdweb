@@ -12,7 +12,15 @@
         echo "<div class='detail_book'>";
         echo "<h1>" . $row["name"] . "</h1>";
         echo "<h4>" . $row["categori"] . "</h4  >";
-        echo "<img src='" . $row["img_url"] . "' alt='Image'>";
+      
+        if( $row["img_url"] != NULL or !empty($row["img_url"])){
+            echo "<a href='/bdweb/pages/bookresult.php?id=" . $row["usrid"] . "'>";
+            echo "<img src='" . $row["img_url"] . "' alt='Image'>";
+        }else{
+            echo "<a href='/bdweb/pages/bookresult.php?id=" . $row["usrid"] . "'>";
+            echo "<img src='/bdweb\comic\sad.png' alt='Image'>";
+        }
+     
         echo "<p class='resume' >" . $row["resume"]."</p>";
         echo "<p> writer " . $row["author"]."</p>";
         echo "<p>" . $row["publication_year"]."</p>";
