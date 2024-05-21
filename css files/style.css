@@ -10,6 +10,7 @@
   border-radius: 10px;
   color: white;
   background: dodgerblue;
+  font-size: 1.2em;
 }
 
 .dropdown-content {
@@ -98,7 +99,7 @@ button:hover{
 
 .bar{
   margin-top: 5px;
-  padding: 5px;
+  padding: 5px; 
 
 }
 .bar input{
@@ -106,6 +107,7 @@ button:hover{
   outline: none;
   padding: 5px;
   border-radius: 10px;
+  font-size: 1.2em;  
 }
 
 .bar input[type="submit"]{
@@ -141,14 +143,17 @@ a button{
   margin-right: 5px;
 }
 
-
-
-
 .container{
+  display: grid;
   text-align: center;
-  padding: 3%;
   background-color: white;
-  
+}
+
+.resume{
+  margin-left: 39%;
+  width: 400px;
+  height: 200px;
+
 }
 .searchcontainer{
   text-align: center;
@@ -161,11 +166,7 @@ a button{
   width: 400px;
   height: 500px;
 }
-.resume{
- padding-left: 38%;
-  width: 400px;
-  height: 100px;
-}
+
 .pagination a{
   border: 1px solid;
   outline: none;

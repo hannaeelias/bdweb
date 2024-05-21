@@ -1,5 +1,5 @@
 <?php
-// Get barcode from form
+
 include "datbaselink.php";
 
 $barcode = $_POST["barcode"];
@@ -41,7 +41,8 @@ if ($data === null || !array_key_exists('records', $data)) {
     
     $title = $bookInfo['title'];
     echo $title;
-    $sqlsearch = "SELECT * FROM boek.booking WHERE name='$title'";
+    $isbn = isset($bookInfo['identifiers']) ? "'" . $bookInfo['identifiers']['isbn_13'][0] . "'" : "NULL";
+    $sqlsearch = "SELECT * FROM boek.booking WHERE name='$title' and isbn=$isbn";
     $doublbook = $conn->query($sqlsearch);
 
     if (mysqli_num_rows($doublbook) == 1) {
@@ -55,20 +56,22 @@ if ($data === null || !array_key_exists('records', $data)) {
         $publish_date = isset($bookInfo['publish_date']) ? "'" . $bookInfo['publish_date'] . "'" : "NULL";
         $number_of_pages = isset($bookInfo['number_of_pages']) ? $bookInfo['number_of_pages'] : "NULL";
         $publisher = isset($bookInfo['publishers'][0]['name']) ? "'" . $bookInfo['publishers'][0]['name'] . "'" : "NULL";
-        $cover_url = !empty($bookInfo['cover']['small']) ? "'" . $bookInfo['cover']['small'] . "'" : "NULL";
+        $cover_url = isset($bookInfo['cover']['large']) ? "'" . $bookInfo['cover']['large'] . "'" : "NULL";
         $description = isset($bookInfo['notes']) ? "'" . $bookInfo['notes'] . "'" : "NULL";
-
-        $sql = "INSERT INTO boek.booking (name, categori, resume, img_url, reserveren, author, artist, publication_year, pages, publisher,amount) 
-                VALUES                  ($title, 'Uncategorized', $description, $cover_url, 0, $author, NULL, $publish_date, $number_of_pages, $publisher,1)";
+        $isbn = isset($bookInfo['identifiers']) ? "'" . $bookInfo['identifiers']['isbn_13'][0] . "'" : "NULL";
+        $sql = "INSERT INTO boek.booking (name, categori, resume, img_url, reserveren, author, artist, publication_year, pages, publisher,isbn,amount) 
+                VALUES                  ($title, 'Uncategorized', $description, $cover_url, 0, $author, NULL, $publish_date, $number_of_pages, $publisher,$isbn,1)";
 
         // Execute SQL statement
         if ($conn->query($sql) === TRUE) {
             echo "New record created successfully";
+           
         } else {
             echo "Error: " . $sql . "<br>" . $conn->error;
         }
-
+        header('Location: /bdweb/pages\add book.php?title=' . urlencode($title) . '&author=' . urlencode($bookInfo['authors'][0]['name']) . '&isbn=' . urlencode($bookInfo['identifiers']['isbn_13'][0]));
     }
+   
     
     // Close connection
     $conn->close();

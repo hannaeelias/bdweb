@@ -24,6 +24,9 @@ if($_SESSION['value'] == null or $_SESSION['value'] == 0){
             <div class="inputbox">
                 <input type="text" name="username" required placeholder="username" >
             </div>
+            <div class="inputbox">
+                <input type="text" name="email" required placeholder="email" >
+            </div>
             <div class="inputbox">   
                 <input type="password" name="PWD" required placeholder="password">
             </div>

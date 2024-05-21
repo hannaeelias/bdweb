@@ -20,10 +20,12 @@ if($_SESSION['value'] == null or $_SESSION['value'] == 0){
 <body>
     <div class="writeHeader"></div>
   
-    <div class="searchcontainer">
+    <div class="container">
         <h1>Books</h1>
-
-        <?php include "C:/xampp/htdocs/bdweb/php files/searc.php"; ?>
+        <div class="books">
+            <?php include "C:/xampp/htdocs/bdweb/php files/searc.php"; ?>
+        </div>
+        
 
     </div>
 

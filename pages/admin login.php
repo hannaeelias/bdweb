@@ -5,6 +5,9 @@ if($_SESSION['value'] == null or $_SESSION['value'] == 0){
     $_SESSION['value'] = '0';
 
 }
+if($_SESSION['value'] == 2){
+    header('Location: /bdweb/pages\admin page.php');
+}
 
 ?>
 <!DOCTYPE html>

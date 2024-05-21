@@ -24,7 +24,7 @@ if ($result->num_rows > 0) {
             echo "<img src='" . $row["img_url"] . "' alt='Image'>";
         }else{
             echo "<a href='/bdweb/pages/bookresult.php?id=" . $row["usrid"] . "'>";
-            echo "<img src='/bdweb\comic\sad.png' alt='Image'>";
+            echo "<img src='/bdweb\comic\cover.png' ' alt='Image'>";
         }
      
         if(mb_strlen($row["name"], 'UTF-8') < 20 ){

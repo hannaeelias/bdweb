@@ -14,14 +14,15 @@
         echo "<h4>" . $row["categori"] . "</h4  >";
       
         if( $row["img_url"] != NULL or !empty($row["img_url"])){
-            echo "<a href='/bdweb/pages/bookresult.php?id=" . $row["usrid"] . "'>";
+           
             echo "<img src='" . $row["img_url"] . "' alt='Image'>";
         }else{
-            echo "<a href='/bdweb/pages/bookresult.php?id=" . $row["usrid"] . "'>";
-            echo "<img src='/bdweb\comic\sad.png' alt='Image'>";
+         
+            echo "<img src='/bdweb\comic\cover.png' alt='Image'>";
         }
-     
-        echo "<p class='resume' >" . $row["resume"]."</p>";
+        echo "<div class='resume'>";
+        echo "<p>" . $row["resume"]."</p>";
+        echo "</div>";
         echo "<p> writer " . $row["author"]."</p>";
         echo "<p>" . $row["publication_year"]."</p>";
         echo "<p> pages " . $row["pages"]."</p>";

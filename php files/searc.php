@@ -22,7 +22,13 @@ if(empty($book)){
             while($row = $result->fetch_assoc()) {
                 echo "<div class='book'>";
                 echo "<a href='/bdweb/pages/bookresult.php?id=" . $row["usrid"] . "'>";
-                echo "<img src='" . $row["img_url"] . "' alt='Image'>";
+                if( $row["img_url"] != NULL or  !empty($row["img_url"])){
+                    echo "<a href='/bdweb/pages/bookresult.php?id=" . $row["usrid"] . "'>";
+                    echo "<img src='" . $row["img_url"] . "' alt='Image'>";
+                }else{
+                    echo "<a href='/bdweb/pages/bookresult.php?id=" . $row["usrid"] . "'>";
+                    echo "<img src='/bdweb\comic\cover.png' ' alt='Image'>";
+                }
                 if(mb_strlen($row["name"], 'UTF-8') < 20 ){
                     echo "</a>";
                     echo "<h2><a href='/bdweb/pages/bookresult.php?id=" . $row["usrid"] . "'>" . $row["name"] . "</a></h2>";

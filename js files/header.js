@@ -8,8 +8,6 @@ document.querySelector(".writeHeader").innerHTML = `
     </div>
     <div class="boxheader">
         <p>follow me</p> <a href="https://github.com/hannaeelias">github</a> <p>|</p> 
-        <a href="/bdweb/php files/logout.php">logout</a><p>|</p> 
-        <a href="/bdweb/pages/register.php">register</a>
         
         
         <div class="bar">

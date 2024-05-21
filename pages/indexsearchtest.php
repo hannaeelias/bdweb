@@ -25,7 +25,6 @@ if($_SESSION['value'] == null or $_SESSION['value'] == 0){
         <div class="books">
              <?php include "C:/xampp/htdocs/bdweb/php files/book.php"; ?>
         </div>
-        
     </div>
     <div class="writefooter"></div>
 

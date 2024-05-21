@@ -27,7 +27,6 @@ if($_SESSION['value'] == null or $_SESSION['value'] == 0){
             echo '<a href="remove book.php"><button>remove book</button></a>';
             }
         ?> 
-
     </div>
 
   
